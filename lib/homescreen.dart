@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:skin_sure/skinCareBot.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -50,7 +51,9 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: size.height * .15,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed(SkinCareBot.routeName);
+                },
                 style: ElevatedButton.styleFrom(
                   alignment: Alignment.center,
                   shape: RoundedRectangleBorder(
@@ -61,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    Icon(Ionicons.person_outline),
+                    const Icon(Ionicons.person_outline),
                     Text("Personalised \nskin care",textAlign: TextAlign.center,overflow: TextOverflow.fade, style: GoogleFonts.nunitoSans(
                         fontWeight: FontWeight.w700,
                         fontSize: size.width * .05),)
